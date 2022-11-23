@@ -1,0 +1,3 @@
+{% if not is_last_page %}					
+    <a href="#" x-data="{ morePosts: {{ next_page }} }" @click.prevent="sendData({ action: 'Add next posts', data:{page: morePosts}}, myWebSocket)" class="{% if page == 'about_us.html' or page == 'components/_postdeets.html' %} invisible {% endif %} btn bg-black font-semibold text-white hover:bg-stone-300 hover:text-gray-900 text-sm flex ">More posts</a>
+{% endif %}

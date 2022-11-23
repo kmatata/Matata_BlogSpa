@@ -1,0 +1,6 @@
+
+    <ul x-data="{target1:'shop', target2:'all posts', target3:'about us'}" class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">        
+        <li><a @click.prevent="sendData({action:'Change page',data:{page:target2}},myWebSocket)" class="{% if active_nav == 'all posts' %}bg-gray-400{% endif %} rounded-md hover:text-gray-200 hover:underline px-4" href="#">Blog</a></li>
+        <li><a @click.prevent="sendData({action:'Change page',data:{page:target3}},myWebSocket)" class="{% if active_nav == 'about us' %}bg-gray-400{% endif %} rounded-md hover:text-gray-200 hover:underline px-4" href="#">About us</a></li>
+    </ul>
+
